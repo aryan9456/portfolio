@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aryan Srivastava</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="tabs">
+        <input type="radio" id="radio-1" name="tabs" checked />
+        <label class="tab" for="radio-1">Home</label>
+        <input type="radio" id="radio-2" name="tabs" />
+        <label class="tab" for="radio-2">Skill</label>
+        <input type="radio" id="radio-3" name="tabs" />
+        <label class="tab" for="radio-3">Projects</label>
+        <input type="radio" id="radio-4" name="tabs" />
+        <label class="tab" for="radio-4">Contact</label>
+        <span class="glider"></span>
+
+        <header class="header">
+                <p>Hello <br> I am Aryan <br>Srivastava <br><sub>(web developer)</sub></p>
+                <img src="title.webp" alt="image" width="90%">
+        </header>
+
+        <div class="project">
+                <div class="qual">
+                    <img src="project.webp" style="height:55px;width:55px;margin-left:20px;">
+                    <p>5 </p> <br><br><Br>projects
+                    <img src="experience.webp" style="height:70px;width:70px;margin-left:20px;">
+                    <p>5 </p><br><br><Br>months
+                    <img src="reviews.webp" style="height:70px;width:70px;margin-left:20px;">
+                    <p>0 </p> <br><br><Br>reviews
+                </div>
+        </div>
+
+        <div class="contacte">
+                <form action="#" autocomplete="on" target="_top" class="form">
+                    <img src="title.webp" style="margin-left:5vw; width:55vh">
+                    <fieldset class="contact" id="contact">
+                        <p class="about"
+                            style="grid-column-start: 1;grid-column-end: 3;font-size: 2.2rem;margin-top: 20px;">
+                            CONTACT ME </p>
+                        <label for="name" class="label"> Name :*</label><input type="text" placeholder="Name"
+                            class="input name" required>
+                        <label for="email" class="label"> Email id :*</label><input type="email" placeholder="Email"
+                            class="input email" required>
+                        <label for="number" class="label"> Contact number :</label><input type="tel"
+                            placeholder="contact number" pattern="[0-9]{10}" class="input number">
+                        <label for="query" class="label"> Query/Review :* </label><input type="message"
+                            placeholder="Query/Review" class="input message" minlength="20" required></textarea>
+                        <div>
+                            <input type="reset" class="submit reset" value="Reset"><input type="submit" value="Submit"
+                                class="submit" onclick="data()">
+                        </div>
+                    </fieldset>
+                </form>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function data() {
+        const name = document.querySelector('.name').value;
+        const email = document.querySelector('.email').value;
+        const number = document.querySelector('.number').value;
+        const message = document.querySelector('.message').value;
+        console.log('YOUR RESPONSE');
+        console.log('name - ' + (name));
+        console.log('Email - ' + (email));
+        console.log('Number - ' + (number));
+        console.log('Message - ' + (message));
+        alert('thanks for writing , check the console to know your response')
+    }
+</script>
+</html>

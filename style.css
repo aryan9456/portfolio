@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap&family=Alkalami&family=Secular+One&display=swap&family=Lato:wght@900&display=swap&family=Titillium+Web:wght@900&display=swap');
+
+:root {
+    --bungee: 'Bungee Spice', Copperplate, Papyrus, fantasy, cursive;
+    --peralta: 'alkalami', serif;
+    --secular: 'Secular One', sans-serif;
+    --lato: 'Lato', sans-serif;
+    --titilium: 'Titillium Web', sans-serif;
+    --primary-color: #1559d7;
+    --secondary-color: #041225;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    /* background:linear-gradient(to left top ,#1e1e1e ,rgb(0, 0, 0)20%,rgb(0, 0, 0)80%,#1e1e1e ); */
+    background-color: black;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 2vh;
+    display: grid;
+    gap: 10%;
+    grid-template-columns: 60% 40%;
+    scale: 0.2;
+    opacity: 0.1;
+}
+
+header>p {
+    position: relative;
+    padding: 18vh 15vh 0 0;
+    font-size: 4vw;
+    text-align: center;
+    font-family: var(--bungee);
+    max-height: fit-content;
+    line-height: 6vw;
+}
+
+header>p>sub {
+    font-size: 2vw;
+}
+
+header img {
+    filter: drop-shadow(0px 0px 20px rgb(247, 149, 50));
+}
+
+.project {
+    left: 4vw;
+    font-family: var(--secular);
+    backdrop-filter: blur(3px);
+    width: 90%;
+    position: fixed;
+    top: 25vh;
+    visibility: hidden;
+    scale: 0.2;
+    opacity: 0.1;
+}
+
+.qual {
+    background: #151525;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    margin-top: 5vh;
+    border-radius: 10px;
+    margin-left: 0.5%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+    padding-bottom: 10px;
+    border-radius: 5vw 0.5vw;
+}
+
+.qual p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #c74cc1;
+    transform: translate(35px, 0);
+}
+
+.contacte {
+    visibility: hidden;
+    top: 0vh;
+    left: 10vw;
+    position: fixed;
+    scale: 0.2;
+    opacity: 0.1;
+}
+
+.contact {
+    justify-content: center;
+    height: max-content;
+    display: grid;
+    margin-top: 10px;
+    color: #050505;
+    grid-template-columns: 30% 60%;
+    grid-template-rows: auto auto auto auto 10%;
+    border: none;
+    text-align: center;
+    padding-top: 20px;
+    align-items: center;
+    column-gap: 5vh;
+    row-gap: 5vh;
+    font-size: 1.5rem;
+}
+
+.form div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 40% auto;
+}
+
+.submit {
+    margin-top: 30px;
+    height: 50px;
+    width: 180px;
+    border: solid 0px;
+    border-radius: 30px;
+    background: linear-gradient(to right bottom, rgb(49, 3, 255)10%, rgb(255, 14, 6));
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+    color: #ebebeb;
+    box-shadow: -1px -1px 8px rgb(113, 4, 255),
+        1px 1px 8px rgb(255, 4, 4);
+    margin-left: 9vw;
+}
+
+.input {
+    background-color: rgb(17, 17, 17);
+    height: 40px;
+    border: solid 2px rgba(255, 254, 254, 0.6);
+    color: #fdfdfd;
+    border-radius: 40px;
+    padding: 0 20px;
+}
+
+
+.form {
+    margin-left: 1vw;
+    background: transparent;
+    display: grid;
+    grid-template-columns: 42% 60%;
+}
+
+.submit:hover,
+.reset:hover,
+.tab:hover {
+    opacity: 0.8;
+}
+
+.submit:active,
+.reset:active,
+.tab:active {
+    transform: scale(0.88);
+}
+
+
+
+.container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2vh 0 4vh 0;
+    background: transparent;
+    position: fixed;
+    top: 83vh;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+    box-shadow: 1px 2px 10px rgb(247, 149, 50);
+    padding: 1.5vh 1.5vh;
+    border-radius: 99px;
+}
+
+.tabs * {
+    z-index: 1000;
+    transition: 0.2s ease-in-out;
+    
+}
+
+input[type="radio"] {
+    display: none;
+    
+}
+
+.tab {
+    background: linear-gradient(rgb(255, 128, 2) 50%, rgb(246, 2, 2) 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: var(--titilium);
+    letter-spacing: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 30vh;
+    font-size: 1.5rem;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+}
+
+input[type="radio"]:checked+label {
+    background: linear-gradient(rgb(255, 0, 0) 50%, rgb(200, 69, 8) 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+input[id="radio-1"]:checked~.glider {
+    transform: translateX(0);
+}
+
+input[id="radio-2"]:checked~.glider {
+    transform: translateX(100%);
+}
+
+input[id="radio-3"]:checked~.glider {
+    transform: translateX(200%);
+}
+
+input[id="radio-4"]:checked~.glider {
+    transform: translateX(300%);
+}
+
+input[id="radio-1"]:checked~.header {
+    visibility: visible;
+    scale: 1;
+    opacity: 1;
+    z-index: 100;
+}
+
+input[id="radio-2"]:checked~.header {
+    visibility: hidden;
+}
+
+input[id="radio-3"]:checked~.project {
+    visibility: visible;
+    scale: 1;
+    opacity: 1;
+    z-index: 100;
+}
+
+input[id="radio-3"]:checked~.header {
+    visibility: hidden;
+}
+
+input[id="radio-4"]:checked~.header {
+    visibility: hidden;
+}
+
+input[id="radio-4"]:checked~.contacte {
+    visibility: visible;
+    scale: 1;
+    opacity: 1;
+    z-index: 100;
+}
+
+.glider {
+    position: fixed;
+    display: flex;
+    height: 8vh;
+    width: 30vh;
+    background-color: rgb(209, 208, 208);
+    z-index: 1;
+    border-radius: 99px;
+    transition: 0.25s ease-in-out;
+    visibility: visible;
+}
